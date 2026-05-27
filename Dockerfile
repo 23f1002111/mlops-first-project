@@ -1,10 +1,10 @@
-FROM python:3.12
+FROM python:3.11
 
 WORKDIR /app
 
-COPY requirements.txt .
+COPY requirements_api.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install --no-cache-dir -r requirements_api.txt
 
 COPY . .
 
