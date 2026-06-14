@@ -88,7 +88,11 @@ r2 = evaluator_r2.evaluate(predictions)
 print("RMSE:", rmse)
 print("R2  :", r2)
 
-model.save(
+# model.save(
+#     "/opt/airflow/models/taxi_rf_model"
+# )
+
+model.write().overwrite().save(
     "/opt/airflow/models/taxi_rf_model"
 )
 
